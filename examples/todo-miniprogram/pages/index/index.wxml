@@ -1,0 +1,30 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="add-bar">
+    <input
+      class="add-input"
+      placeholder="添加待办，回车或点添加"
+      value="{{input}}"
+      bindinput="onInput"
+      confirm-type="done"
+      bindconfirm="add"
+    />
+    <button class="add-btn" size="mini" type="primary" bindtap="add">添加</button>
+  </view>
+
+  <view wx:if="{{todos.length === 0}}" class="empty">暂无待办，添加一个吧 📝</view>
+
+  <view wx:else class="list">
+    <view
+      class="item {{item.done ? 'done' : ''}}"
+      wx:for="{{todos}}"
+      wx:key="id"
+      bindtap="toggle"
+      data-id="{{item.id}}"
+    >
+      <view class="check">{{item.done ? '✓' : ''}}</view>
+      <view class="title">{{item.title}}</view>
+      <view class="del" catchtap="remove" data-id="{{item.id}}">删除</view>
+    </view>
+  </view>
+</view>

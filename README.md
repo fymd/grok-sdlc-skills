@@ -70,6 +70,11 @@ full flow on a tiny Python CLI:
 The 6 unit tests pass and the CLI is scriptable — proof that “spec before code”
 and “tests are proof” actually hold end to end.
 
+For the same requirement implemented as a **WeChat mini program**, see
+[`examples/todo-miniprogram`](examples/todo-miniprogram): same add/complete/delete
+flow, now with a real UI and local `Storage` persistence. Open it in WeChat
+DevTools (appid set to `touristappid` for local testing without an account).
+
 ---
 
 ## Core Principles Encoded
@@ -105,11 +110,17 @@ skills/
     └── SKILL.md
 
 examples/
-└── todo-cli/        # end-to-end reference walkthrough
+├── todo-cli/        # end-to-end reference walkthrough (Python CLI)
+│   ├── README.md
+│   ├── src/todo.py
+│   ├── tests/test_todo.py
+│   └── docs/{prd.md, plan.md, adr/0001-storage-format.md, verify-report.md, review.md}
+└── todo-miniprogram/  # same flow as a WeChat mini program (UI + local Storage)
     ├── README.md
-    ├── src/todo.py
-    ├── tests/test_todo.py
-    └── docs/{prd.md, plan.md, adr/0001-storage-format.md, verify-report.md, review.md}
+    ├── project.config.json
+    ├── app.{js,json,wxss}
+    ├── utils/store.js
+    └── pages/index/
 ```
 
 Each `SKILL.md` follows the standard Agent Skills format (YAML frontmatter + imperative instructions).

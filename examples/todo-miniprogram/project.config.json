@@ -1,0 +1,21 @@
+{
+  "description": "待办清单小程序 - grok-sdlc-skills 端到端示例（小程序版）",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "bigPackageSizeSupport": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.0.0",
+  "appid": "touristappid",
+  "projectname": "todo-miniprogram",
+  "condition": {}
+}
