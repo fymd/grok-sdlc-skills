@@ -58,6 +58,20 @@ You can also call any skill directly, e.g.:
 
 ---
 
+## Example Walkthrough
+
+See [`examples/todo-cli`](examples/todo-cli) for a complete, runnable demo of the
+full flow on a tiny Python CLI:
+
+- `docs/prd.md` (sdlc-spec) · `docs/plan.md` + `docs/adr/0001-storage-format.md` (sdlc-plan)
+- `src/todo.py` (sdlc-build) · `tests/test_todo.py` + `docs/verify-report.md` (sdlc-verify)
+- `docs/review.md` (sdlc-review)
+
+The 6 unit tests pass and the CLI is scriptable — proof that “spec before code”
+and “tests are proof” actually hold end to end.
+
+---
+
 ## Core Principles Encoded
 
 1. **Spec before code** — no implementation without an approved artifact
@@ -75,20 +89,32 @@ skills/
 ├── sdlc-orchestrator/
 │   └── SKILL.md
 ├── sdlc-spec/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   └── references/prd-template.md
 ├── sdlc-plan/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   └── references/{plan-template.md, adr-template.md}
 ├── sdlc-build/
 │   └── SKILL.md
 ├── sdlc-verify/
 │   └── SKILL.md
 ├── sdlc-review/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   └── references/review-checklist.md
 └── sdlc-ship/
     └── SKILL.md
+
+examples/
+└── todo-cli/        # end-to-end reference walkthrough
+    ├── README.md
+    ├── src/todo.py
+    ├── tests/test_todo.py
+    └── docs/{prd.md, plan.md, adr/0001-storage-format.md, verify-report.md, review.md}
 ```
 
 Each `SKILL.md` follows the standard Agent Skills format (YAML frontmatter + imperative instructions).
+Templates used by a skill live in that skill’s `references/` folder so the skill
+stays self-contained after installation.
 
 ---
 
@@ -98,7 +124,10 @@ Each `SKILL.md` follows the standard Agent Skills format (YAML frontmatter + imp
 - Compatible with any agent that supports the common `SKILL.md` skill format
 - Works especially well when the agent has GitHub / git tools available
 
----
+## Validation
+
+A CI workflow (`.github/workflows/ci.yml`) validates every `SKILL.md` frontmatter
+on push/PR using `.github/scripts/validate_skills.py`.
 
 ## Contributing / Customization
 
@@ -109,4 +138,4 @@ Created with the Grok skill-creator and aligned with modern agentic SDLC practic
 ---
 
 **Author**: fymd (via Grok)  
-**Last updated**: 2026-10-09
+**Last updated**: 2026-10-18

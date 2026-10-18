@@ -44,6 +44,8 @@ Apply a multi-axis review to the changes (or whole codebase if requested) to rai
    - Tests are readable and maintainable?  
    - Any missing negative / failure-path tests?
 
+For a copy-paste checklist, use [`references/review-checklist.md`](references/review-checklist.md).
+
 ## Instructions
 
 1. Identify the scope (latest commits, open PR, specific files, or whole project).
@@ -62,6 +64,7 @@ Apply a multi-axis review to the changes (or whole codebase if requested) to rai
 
 ## Security Checklist (quick)
 
+Use the consolidated version in [`references/review-checklist.md`](references/review-checklist.md), which includes:
 - [ ] No secrets in source
 - [ ] All external input validated
 - [ ] AuthZ checks on every sensitive operation

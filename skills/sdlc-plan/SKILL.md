@@ -19,21 +19,16 @@ Transform an approved PRD into an actionable implementation plan consisting of t
    Extract all functional requirements, acceptance criteria, and non-functional constraints.
 
 2. **Identify architecture and tech decisions**  
-   Propose the minimal viable stack if not already constrained. Record major decisions as short ADRs (Architecture Decision Records) in `docs/adr/` or inline in `plan.md`. Prefer boring, well-supported technology unless the PRD demands otherwise.
+   Propose the minimal viable stack if not already constrained. Record major decisions as short ADRs (Architecture Decision Records) — use [`references/adr-template.md`](references/adr-template.md). Prefer boring, well-supported technology unless the PRD demands otherwise.
 
 3. **Decompose into vertical slices**  
    Prefer end-to-end thin slices (UI + API + data + test) over horizontal layers. Each slice should deliver observable value and be independently testable.
 
-4. **Produce `docs/plan.md` (or `.specs/plan.md`)** with:
+4. **Produce `docs/plan.md` (or `.specs/plan.md`)** using the structure in [`references/plan-template.md`](references/plan-template.md), which includes:
    - **Summary** — one paragraph of the approach
    - **Architecture Overview** — components, data flow, key interfaces (use simple Mermaid or ASCII if helpful)
    - **Tech Stack** — languages, frameworks, major libraries with versions if known
-   - **Task Breakdown** — ordered list of tasks, each with:
-     - ID (e.g. T1, T2)
-     - Description
-     - Acceptance / Definition of Done
-     - Estimated complexity (S/M/L)
-     - Dependencies
+   - **Task Breakdown** — ordered list/table of tasks, each with ID, Description, Definition of Done, Complexity (S/M/L), Dependencies
    - **Risks & Mitigations**
    - **Testing Strategy** — unit, integration, e2e focus areas
    - **Milestones** — logical checkpoints

@@ -31,6 +31,9 @@ Execute the implementation plan through small, verified increments. Enforce TDD 
 5. **Keep main/trunk green**  
    Never leave the default branch in a broken state. Use feature branches for larger work.
 
+The TDD loop, commit conventions, and a build checklist are consolidated in
+[`references/tdd-and-commits.md`](references/tdd-and-commits.md).
+
 ## Instructions
 
 1. Select the next incomplete task from the plan (highest priority or lowest risk remaining).

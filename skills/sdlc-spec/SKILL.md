@@ -15,7 +15,7 @@ Convert vague product ideas or feature requests into a structured, machine- and 
    Ask only the minimum questions required to remove ambiguity (target users, core problem, must-have vs nice-to-have, constraints on tech/stack/time/budget, success metrics). Prefer one round of clarification.
 
 2. **Produce the artifact**  
-   Create or update a Markdown file in the project (preferred locations: `docs/prd.md`, `.specs/prd.md`, or `intent.md`). Use the template structure below.
+   Create or update a Markdown file in the project (preferred locations: `docs/prd.md`, `.specs/prd.md`, or `intent.md`). Use the template in [`references/prd-template.md`](references/prd-template.md) as the structure.
 
 3. **Required sections in the PRD**  
    - **Problem / Opportunity** — 2-4 sentences  
@@ -41,49 +41,9 @@ Convert vague product ideas or feature requests into a structured, machine- and 
 6. **Versioning**  
    If the repo already exists, commit the PRD with message `docs: add/update PRD for <feature>`.
 
-## Template Skeleton (copy and fill)
+## Template
 
-```markdown
-# [Project / Feature Name] — Product Requirements
-
-## Problem
-...
-
-## Goals
-- [ ]
-
-## Non-goals
-- [ ]
-
-## Users
-...
-
-## User Stories
-1. As a … I want … so that …
-   - Acceptance:
-     - Given … When … Then …
-
-## Functional Requirements
-1. …
-2. …
-
-## Non-functional Requirements
-- Performance: …
-- Security: …
-- …
-
-## Constraints & Assumptions
-…
-
-## Out of Scope
-…
-
-## Success Metrics
-…
-
-## Open Questions
-- [ ]
-```
+Use [`references/prd-template.md`](references/prd-template.md) — a ready-to-copy skeleton with every required section. Duplicate it into the target repo and fill it in.
 
 ## Anti-patterns
 

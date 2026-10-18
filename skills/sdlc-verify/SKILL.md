@@ -45,6 +45,9 @@ Prove that the implementation satisfies the acceptance criteria and is free of k
    - Remaining known issues or risks
    - Recommendation (ready for review / needs more work)
 
+A ready-to-fill acceptance-mapping table, test-category checklist, and debugging
+protocol are in [`references/verify-checklist.md`](references/verify-checklist.md).
+
 ## Definition of Done for this phase
 
 - All automated tests green

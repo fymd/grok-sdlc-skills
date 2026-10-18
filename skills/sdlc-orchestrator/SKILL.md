@@ -66,6 +66,9 @@ Idea → [sdlc-spec] → Spec/PRD
 - Review: security checklist applied, complexity reduced where possible
 - Ship: CI green (or generated), docs complete, release notes drafted
 
+A printable version of the kickoff + gate checklist is in
+[`references/kickoff-checklist.md`](references/kickoff-checklist.md).
+
 ## Integration Notes
 
 - Prefer existing GitHub tools for repo creation, file push, PR, branch management.
@@ -74,4 +77,5 @@ Idea → [sdlc-spec] → Spec/PRD
 
 ## References
 
-See phase-specific skills for detailed procedures. Keep this skill lightweight — it only orchestrates.
+- Phase-specific skills for detailed procedures: `sdlc-spec`, `sdlc-plan`, `sdlc-build`, `sdlc-verify`, `sdlc-review`, `sdlc-ship`.
+- [`references/kickoff-checklist.md`](references/kickoff-checklist.md) — confirm-before-start + phase-gate table.

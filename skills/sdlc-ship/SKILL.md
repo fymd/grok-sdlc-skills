@@ -47,14 +47,10 @@ Draft a short changelog or release notes covering:
 - Bug fixes
 - Breaking changes
 - Migration steps (if any)
+Use [`references/release-notes-template.md`](references/release-notes-template.md).
 
 ### 6. Launch Checklist (present to user)
-- [ ] All tests green in CI
-- [ ] Secrets / env vars documented (never committed)
-- [ ] README allows a new developer to run the project
-- [ ] Monitoring / logging approach noted (even if basic)
-- [ ] Rollback plan considered
-- [ ] User has confirmed the target environment and will perform the actual deploy
+Use [`references/launch-checklist.md`](references/launch-checklist.md) — covers CI green, secrets documentation, README runnability, monitoring, rollback, and explicit user confirmation of the deploy target.
 
 ### 7. Final Handoff
 Push all changes, open or update the PR if needed, and give the user a clear summary of what is ready and what remains for them (e.g., cloud credentials, domain, final deploy command).
