@@ -30,13 +30,13 @@ Page({
   },
 
   toggle(e) {
-    const id = e.currentTarget.dataset.id;
+    const id = Number(e.currentTarget.dataset.id);
     store.toggle(id);
     this.refresh();
   },
 
   remove(e) {
-    const id = e.currentTarget.dataset.id;
+    const id = Number(e.currentTarget.dataset.id);
     store.remove(id);
     this.refresh();
   }

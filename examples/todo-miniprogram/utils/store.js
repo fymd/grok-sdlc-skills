@@ -14,8 +14,10 @@ function nextId(list) {
 }
 
 function add(title) {
+  const t = (title || '').trim();
+  if (!t) return null;
   const list = load();
-  const item = { id: nextId(list), title: title.trim(), done: false };
+  const item = { id: nextId(list), title: t, done: false };
   list.push(item);
   save(list);
   return item;

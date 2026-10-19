@@ -24,6 +24,8 @@ todo-miniprogram/
    - ❌ 错误：`.../examples`（父目录，会报 `app.json: 在项目根目录未找到 app.json`）
 2. 因为 appid 设为 `touristappid`，可直接以**测试号**模式本地预览，无需注册小程序账号。
 3. 真机预览 / 上传发布需要替换为你自己的小程序 AppID，并登录开发者工具。
+4. 逻辑单测：`node tests/store.test.js`（10 用例，零依赖）。
+5. 完整「上线」步骤（换真实 AppID → 上传 → 提交审核 → 发布）见 [LAUNCH.md](./LAUNCH.md)。
 
 ## 与 CLI 版的区别
 | | todo-cli | todo-miniprogram |
